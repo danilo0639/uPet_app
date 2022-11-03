@@ -1,0 +1,63 @@
+.main_container{
+  max-width: 400px;
+  padding-top: 100px;
+
+}
+
+.container_name{
+  display: inline-flex;
+  padding-top: 10px ;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.first_name_container{
+  padding-right: 10px;
+  max-width: 100%
+}
+
+.last_name_container{
+  padding-left: 10px;
+  max-width: 100%
+}
+
+.phone_container{
+  display: inline-flex;
+  padding-top: 10px;
+}
+.phone{
+  width: 100%;
+}
+.email_container {
+  padding-top: 10px;
+}
+.email{
+  width: 100%;
+}
+.password_container {
+  padding-top: 10px;
+}
+.password{
+  width: 100%;
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  
+}
+.button{
+    width: 100%;
+    background: #02E0B1 !important;
+    color: white !important;
+    height: 55px; 
+}
+
+.icon_usa_flag{
+    display: flex;
+    max-width: 20%;
+    padding-right: 10px;
+    padding-left: 10px;
+
+
+}
