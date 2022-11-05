@@ -6,7 +6,7 @@
 
 .container_name{
   display: inline-flex;
-  padding-top: 10px ;
+  padding-top: 50px ;
   padding-bottom: 10px;
   justify-content: space-between;
 }
@@ -24,6 +24,7 @@
 .phone_container{
   display: inline-flex;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 .phone{
   width: 100%;
