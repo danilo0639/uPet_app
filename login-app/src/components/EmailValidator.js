@@ -1,41 +1,47 @@
 import React from 'react';
-import {TextField} from "@material-ui/core"
-import { ValidatorForm} from 'react-material-ui-form-validator';
+import {TextField } from "@material-ui/core"
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 class EmailValidator extends React.Component {
 
     state = {
         email: '',
+       
     }
 
     handleChange = (event) => {
-        const email = event.target.value;
+        const email = event.target.value.charAt(0).toLowerCase() + event.target.value.slice(1);
         this.setState({ email });
     }
 
     handleSubmit = () => {
         
+        
     }
+    
 
     render() {
-        const { email } = this.state;
+        const { email} = this.state;
         return (
             <ValidatorForm
                 ref="form"
                 onSubmit={this.handleSubmit}
-                onError={errors => console.log(errors)}
+                
             >
+                
                 <TextField
                     type="email"
                     label="Email"
-                    onChange={this.handleChange}
-                    name="email"
                     value={email}
-                    validators={['required', 'isEmail']}
-                    errorMessages={['email is not valid']}
                     variant="outlined" 
                     className='email'
+                    onChange={this.handleChange}
+                    name="email"
+                    validators={['required', 'isEmail']}
+                    errorMessages={['this field is required', 'email is not valid']}
                 />
+                 
+                 
             </ValidatorForm>
 
         );

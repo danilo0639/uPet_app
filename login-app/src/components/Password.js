@@ -5,36 +5,41 @@ import { ValidatorForm} from 'react-material-ui-form-validator';
 class Password extends React.Component {
 
     state = {
-        Password: '',
+        password: '',
     }
 
     handleChange = (event) => {
-        const Password = event.target.value;
-        this.setState({ Password });
-    }
-
-    handleSubmit = () => {
+        const password = event.target.value;
+        this.setState({ password });
         
     }
 
+    handleSubmit = (event) => {
+        
+       
+    }
+
     render() {
-        const { Password } = this.state;
+        const { password } = this.state;
         return (
             <ValidatorForm
                 ref="form"
                 onSubmit={this.handleSubmit}
                 onError={errors => console.log(errors)}
             >
+           
                 <TextField
                     label="Password"
-                    onChange={this.handleChange}
-                    name="Password"
-                    value={Password}
+                    name="password"
+                    value={password}
                     variant="outlined" 
                     className="password" 
                     type="password"
+                    onChange={this.handleChange}
                     
                 />
+              
+                
             </ValidatorForm>
 
         );

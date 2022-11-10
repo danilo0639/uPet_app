@@ -5,12 +5,12 @@ import { ValidatorForm} from 'react-material-ui-form-validator';
 class PhoneNumber extends React.Component {
 
     state = {
-        PhoneNumber: '',
+        phone: '',
     }
 
     handleChange = (event) => {
-        const PhoneNumber = event.target.value;
-        this.setState({ PhoneNumber });
+        const phone = event.target.value;
+        this.setState({ phone });
     }
 
     handleSubmit = () => {
@@ -18,7 +18,7 @@ class PhoneNumber extends React.Component {
     }
 
     render() {
-        const { PhoneNumber } = this.state;
+        const { phone } = this.state;
         return (
             <ValidatorForm
                 ref="form"
@@ -26,12 +26,15 @@ class PhoneNumber extends React.Component {
                 onError={errors => console.log(errors)}
             >
                 <TextField
+                    min = "1"
+                    max= "10"
                     type="tel"
                     label="Phone number"
                     onChange={this.handleChange}
-                    name="PhoneNumber"
-                    value={PhoneNumber}
+                    name="phone"
+                    value={phone}
                     variant="outlined" 
+                   
                     
                 />
             </ValidatorForm>
@@ -41,3 +44,6 @@ class PhoneNumber extends React.Component {
 }
 
 export default PhoneNumber;
+
+
+

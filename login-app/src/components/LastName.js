@@ -9,7 +9,7 @@ class LastName extends React.Component {
     }
 
     handleChange = (event) => {
-        const lastname = event.target.value[0].toUpperCase() + event.target.value.substring(1);
+        const lastname = event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
         this.setState({ lastname });
     }
 

@@ -1,9 +1,10 @@
 import React from "react"
-import Form from './Form/Form';
+import FormBox from './Form/FormBox';
 
 function App() {
   return (
-   <Form />        
+   <FormBox />      
+     
   );
 }
 
