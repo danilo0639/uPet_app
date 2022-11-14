@@ -11,33 +11,46 @@ import ButtonInput from "../components/ BottonInput"
 
 
 
+
 function FormBox() {
    
   return (
-    <div className="main_container" >
-      <img src={Upet_icon} alt="uPet icon" className="upet_icon" />   
-        <div className="container_name">
-          <div className="first_name_container">
-            <FirstName />
+    
+    <form>
+      <div className="main_container" >
+        <img 
+          src={Upet_icon}
+          alt="uPet icon" 
+          className="upet_icon"
+        />   
+          <div className="container_name">
+            <div className="first_name_container">
+              <FirstName />
+            </div>
+            <div className="last_name_container">
+              <LastName />
+            </div>
           </div>
-          <div className="last_name_container">
-            <LastName />
+          <div className="phone_container" >
+            <img 
+              src={Usaflag} 
+              alt="Usa flag"
+              className="icon_usa_flag"
+            />
+            <PhoneNumber />
           </div>
-        </div>
-        <div className="phone_container" >
-          <img src={Usaflag} alt="Usa flag" className="icon_usa_flag" />
-          <PhoneNumber />
-        </div>
-        <div className="password_container">
-          <EmailValidator />
-        </div>
-        <div className="password_container">
-          <Password  />
-        </div>
-        <div className="button_container">
-          <ButtonInput/>
-        </div>     
-    </div>
+          <div className="password_container">
+            <EmailValidator />
+          </div>
+          <div className="password_container">
+            <Password  />
+          </div>
+          <div className="button_container">
+            <ButtonInput/>
+          </div>     
+      </div>
+    </form>
+    
   );
 }
 

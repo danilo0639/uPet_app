@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextField} from "@material-ui/core"
-import { ValidatorForm} from 'react-material-ui-form-validator';
+
 
 class LastName extends React.Component {
 
@@ -20,11 +20,7 @@ class LastName extends React.Component {
     render() {
         const { lastname } = this.state;
         return (
-            <ValidatorForm
-                ref="form"
-                onSubmit={this.handleSubmit}
-                onError={errors => console.log(errors)}
-            >
+            
                 <TextField
                     label="Last name"
                     onChange={this.handleChange}
@@ -33,7 +29,7 @@ class LastName extends React.Component {
                     variant="outlined" 
                     
                 />
-            </ValidatorForm>
+         
 
         );
     }

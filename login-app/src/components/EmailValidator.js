@@ -1,6 +1,5 @@
 import React from 'react';
 import {TextField } from "@material-ui/core"
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 class EmailValidator extends React.Component {
 
@@ -23,29 +22,22 @@ class EmailValidator extends React.Component {
     render() {
         const { email} = this.state;
         return (
-            <ValidatorForm
-                ref="form"
-                onSubmit={this.handleSubmit}
-                
-            >
-                
-                <TextField
-                    type="email"
-                    label="Email"
-                    value={email}
-                    variant="outlined" 
-                    className='email'
-                    onChange={this.handleChange}
-                    name="email"
-                    validators={['required', 'isEmail']}
-                    errorMessages={['this field is required', 'email is not valid']}
-                />
-                 
-                 
-            </ValidatorForm>
-
+            <TextField
+                type="email"
+                label="Email"
+                value={email}
+                variant="outlined" 
+                className='email'
+                onChange={this.handleChange}
+                name="email"
+                validators={['required', 'isEmail']}
+                errorMessages={['this field is required', 'email is not valid']}
+            />   
         );
     }
 }
 
 export default EmailValidator;
+
+
+
